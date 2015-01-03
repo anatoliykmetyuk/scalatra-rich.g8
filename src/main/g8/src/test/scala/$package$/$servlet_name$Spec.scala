@@ -4,7 +4,7 @@ import org.scalatest._
 import org.scalatest.selenium._
 import org.mockito.Mockito._
 
-class $servlet_name$Spec extends FlatSpec with Matchers with Chrome {
+class $servlet_name$Spec extends FlatSpec with Matchers with HtmlUnit {
 
   markup {"""
 $servlet_name$ Servlet
@@ -16,7 +16,7 @@ This is the base servlet of the application.
 
   it should "respond with code 200 on route '/'" in {
     go to "http://localhost:8080/"
-    status shouldBe 200
+    pageTitle shouldBe "Hello World!"
   }
 
 }
