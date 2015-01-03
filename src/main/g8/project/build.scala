@@ -22,13 +22,22 @@ object $name;format="Camel"$Build extends Build {
       scalaVersion := ScalaVersion,
       resolvers += Classpaths.typesafeReleases,
       libraryDependencies ++= Seq(
-        "org.scalatra" %% "scalatra" % ScalatraVersion,
+        // Scalatra
+        "org.scalatra" %% "scalatra"         % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
-        "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
-        "ch.qos.logback" % "logback-classic" % "1.1.2" % "runtime",
-        "org.eclipse.jetty" % "jetty-webapp" % "9.1.5.v20140505" % "container",
-        "org.eclipse.jetty" % "jetty-plus" % "9.1.5.v20140505" % "container",
-        "javax.servlet" % "javax.servlet-api" % "3.1.0"
+
+        // Testing
+        "org.scalatest"           %% "scalatest"     % "2.2.3"   % "test",
+        "org.seleniumhq.selenium" %% "selenium-java" % "2.44.0"  % test,
+        "org.mockito"             %% "mockito-all"   % "1.10.17" % test,
+
+        // Container
+        "org.eclipse.jetty" % "jetty-webapp"      % "9.1.5.v20140505" % "container",
+        "org.eclipse.jetty" % "jetty-plus"        % "9.1.5.v20140505" % "container",
+        "javax.servlet"     % "javax.servlet-api" % "3.1.0",
+        
+        // Other
+        "ch.qos.logback" % "logback-classic" % "1.1.2" % "runtime"
       ),
       scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
         Seq(
