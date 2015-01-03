@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# An initialization script to download all the javascript dependencies.
+# Must be called before using this template.
+
+npm install
+(cd src/main/webapp/assets/js; bower install)
