@@ -1,8 +1,5 @@
 # Scalatra sbt project #
 
-[![Build Status](https://secure.travis-ci.org/scalatra/scalatra-sbt.g8.png)](http://travis-ci.org/scalatra/scalatra-sbt.g8)
-
-
 [g8](http://github.com/n8han/giter8) template to get a Scalatra web service up and running quickly.
 
 ## Use this template ##
@@ -11,7 +8,7 @@
 - Get the g8 template and run it:
 
 ```sh
-$ g8 scalatra/scalatra-sbt
+$ g8 anatoliykmetyuk/scalatra-rich
 $ cd <name-of-app>
 $ ./sbt
 > container:start
@@ -20,6 +17,7 @@ $ ./sbt
 - Open [http://localhost:8080/](http://localhost:8080/) in your browser.
 
 ## Modify this template ##
+This is a clone of [scalatra/scalatra-sbt.g8](https://github.com/scalatra/scalatra-sbt.g8), it is highly advised that you work on the original template rather then this clone.
 
 - [Install sbt](http://www.scala-sbt.org/), version 0.13.0 or higher.
 - Fork [scalatra/scalatra-sbt.g8](https://github.com/scalatra/scalatra-sbt.g8) on GitHub to your account.
